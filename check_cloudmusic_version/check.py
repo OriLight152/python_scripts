@@ -30,7 +30,7 @@ try:
                 response = requests.post(url=BARK_URL, data=data)
             version_local['name'] = version_name
             version_local['build'] = version_build
-            with open('config.json', 'w') as f:
+            with open('./config.json', 'w') as f:
                 f.write(json.dumps(version_local))
         else:
             print('[信息]未检测到新版本。')
